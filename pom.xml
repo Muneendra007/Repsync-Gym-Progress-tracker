@@ -125,6 +125,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+
             <!-- Exec plugin to run the app -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -133,29 +134,6 @@
                 <configuration>
                     <mainClass>com.repsync.Main</mainClass>
                 </configuration>
-            </plugin>
-
-            <!-- Shade plugin to create standalone Fat JAR with all dependencies included -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.repsync.Main</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
