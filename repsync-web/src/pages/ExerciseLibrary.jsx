@@ -76,7 +76,7 @@ const ExerciseLibrary = () => {
  {/* Top Banner */}
  <div className="relative overflow-hidden bg-gradient-to-b from-gym-card to-gym-dark border-b border-white/10 pt-10 pb-12 px-6">
  <div className="absolute -top-10 left-1/3 w-96 h-96 bg-gym-accent/10 rounded-full blur-3xl pointer-events-none" />
- <div className="max-w-7xl mx-auto">
+ <div className="w-full">
  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
  <div>
  <span className="text-xs font-bold uppercase tracking-widest text-gym-accent mb-2 block flex items-center gap-2">
@@ -126,7 +126,7 @@ const ExerciseLibrary = () => {
  </div>
 
  {/* Main Content Grid */}
- <div className="max-w-7xl mx-auto px-6 mt-8">
+ <div className="w-full px-6 mt-8">
  <div className="flex items-center justify-between mb-6">
  <span className="text-sm font-bold text-gray-400">
  Showing <span className="text-white font-black">{filtered.length}</span> Exercises
@@ -150,7 +150,7 @@ const ExerciseLibrary = () => {
  return (
  <div
  key={ex.id}
- className="glass-card flex flex-col justify-between transition-all duration-300 hover:border-gym-accent/50 group"
+ className={`glass-card flex flex-col justify-between transition-all duration-300 hover:border-gym-accent/50 group ${isExpanded ? 'md:col-span-2 lg:col-span-3' : ''}`}
  >
  <div>
  {/* Header Tags */}

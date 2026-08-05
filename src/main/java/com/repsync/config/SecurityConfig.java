@@ -54,6 +54,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/v1/auth/**").permitAll() // Public login/register endpoints
                 .requestMatchers("/api/v1/workouts/**", "/api/v1/exercises/**", "/api/v1/analytics/**").permitAll() // Allow workout & analytics queries
                 .requestMatchers("/api/v1/admin/**").hasRole("ADMIN") // Only ADMIN role can access
+                .requestMatchers("/error").permitAll() // Allow error responses
                 .anyRequest().authenticated()
             )
             .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

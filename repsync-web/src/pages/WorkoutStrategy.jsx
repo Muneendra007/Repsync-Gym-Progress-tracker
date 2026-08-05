@@ -668,7 +668,7 @@ const WorkoutStrategy = () => {
  {/* Header Banner */}
  <div className="relative overflow-hidden bg-gradient-to-b from-gym-card to-gym-dark border-b border-white/10 pt-10 pb-12 px-6">
  <div className="absolute -top-10 -right-10 w-96 h-96 bg-gym-purple/10 rounded-full blur-3xl pointer-events-none" />
- <div className="max-w-7xl mx-auto">
+ <div className="w-full">
  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
  <div>
  <span className="text-xs font-bold uppercase tracking-widest text-gym-accent mb-2 block flex items-center gap-2">
@@ -723,7 +723,7 @@ const WorkoutStrategy = () => {
  </div>
  </div>
 
- <div className="max-w-7xl mx-auto px-6 mt-8">
+ <div className="w-full px-6 mt-8">
  {/* STEP 1 -> STEP 2 -> STEP 3: BMI & GOAL DETERMINATION ENGINE CARD */}
  <div className="glass-card mb-8 bg-gradient-to-r from-gym-card via-gym-dark to-gym-card border-gym-accent/40 overflow-hidden shadow-2xl">
  <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
@@ -1163,7 +1163,7 @@ const WorkoutStrategy = () => {
  e.stopPropagation();
  setLiveGymExercise({
  exercise: ex,
- dayName: selectedDayObj?.dayName || 'Today',
+ dayName: currentDayConfig?.dayName || 'Today',
  muscleGroup: ex.muscleGroup
  });
  }}

@@ -111,7 +111,7 @@ const PRAnalytics = () => {
  {/* Top Banner */}
  <div className="relative overflow-hidden bg-gradient-to-b from-gym-card to-gym-dark border-b border-white/10 pt-10 pb-12 px-6">
  <div className="absolute top-0 right-1/3 w-96 h-96 bg-gym-success/10 rounded-full blur-3xl pointer-events-none" />
- <div className="max-w-7xl mx-auto">
+ <div className="w-full">
  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
  <div>
  <span className="text-xs font-bold uppercase tracking-widest text-gym-success mb-2 block flex items-center gap-2">
@@ -137,7 +137,7 @@ const PRAnalytics = () => {
  </div>
  </div>
 
- <div className="max-w-7xl mx-auto px-6 mt-8">
+ <div className="w-full px-6 mt-8">
  {/* Celebration Banner */}
  {celebration && (
  <div className="mb-8 p-6 rounded-2xl bg-gradient-to-r from-gym-success/20 via-gym-accent/20 to-gym-purple/20 border border-gym-success/50 shadow-2xl animate-bounce-once flex items-center justify-between">

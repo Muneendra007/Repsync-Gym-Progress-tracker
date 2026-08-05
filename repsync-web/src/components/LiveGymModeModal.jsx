@@ -97,7 +97,7 @@ const LiveGymModeModal = ({ isOpen, onClose, exercise, dayName, muscleGroup, goa
  </div>
 
  {/* Main Grid: Biomechanical Guide on Left, Giant Touch Logger on Right */}
- <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 my-6 flex-1 items-center max-w-7xl mx-auto w-full">
+ <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 my-6 flex-1 items-center w-full">
  {/* Left: Widescreen Biomechanical Animation (7 cols) */}
  <div className="lg:col-span-7">
  <ExerciseAnimationGuide

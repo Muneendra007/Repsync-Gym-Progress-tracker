@@ -265,7 +265,7 @@ const LiveWorkoutCompanion = ({ isOpen, onClose, planData, userWeight = 75 }) =>
  </button>
  </div>
  ) : currentExercise ? (
- <div className="flex-1 overflow-y-auto p-6 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+ <div className="flex-1 overflow-y-auto p-6 w-full grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
  {/* Left/Center Column: Active Exercise & Form/Logger Tabs */}
  <div className="lg:col-span-2 space-y-6">
  {/* Active Exercise Header Card */}

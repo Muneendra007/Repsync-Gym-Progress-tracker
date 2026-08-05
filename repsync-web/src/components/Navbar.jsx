@@ -25,7 +25,7 @@ const Navbar = () => {
 
  return (
  <nav className="sticky top-0 z-50 bg-gym-dark/90 backdrop-blur-lg border-b border-white/10 px-6 py-4">
- <div className="max-w-7xl mx-auto flex items-center justify-between">
+ <div className="w-full flex items-center justify-between">
  <Link to="/dashboard" className="flex items-center gap-3 group">
  <div className="p-2 rounded-xl bg-gradient-to-tr from-gym-accent to-gym-purple text-gym-dark transition-transform duration-300 group-hover:scale-110">
  <Dumbbell className="w-6 h-6" />

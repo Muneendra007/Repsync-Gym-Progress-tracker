@@ -55,12 +55,27 @@ public class DatabaseConnection {
                 return;
             }
             props.load(input);
-            this.url = props.getProperty("db.url");
-            this.username = props.getProperty("db.username");
-            this.password = props.getProperty("db.password");
+            this.url = resolveEnv(props.getProperty("db.url"));
+            this.username = resolveEnv(props.getProperty("db.username"));
+            this.password = resolveEnv(props.getProperty("db.password"));
         } catch (IOException e) {
             System.err.println("ERROR: Failed to load db.properties: " + e.getMessage());
         }
+    }
+
+    private String resolveEnv(String value) {
+        if (value != null && value.startsWith("${") && value.endsWith("}")) {
+            String envVar = value.substring(2, value.length() - 1);
+            int colonIdx = envVar.indexOf(':');
+            String defaultVal = null;
+            if (colonIdx != -1) {
+                defaultVal = envVar.substring(colonIdx + 1);
+                envVar = envVar.substring(0, colonIdx);
+            }
+            String envVal = System.getenv(envVar);
+            return envVal != null ? envVal : (defaultVal != null ? defaultVal : value);
+        }
+        return value;
     }
 
     /**
